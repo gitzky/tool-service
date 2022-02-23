@@ -8,4 +8,13 @@ router.use('/api/readWord', async (ctx, next) => {
   var json = { code: '0', data: { a: 1 }, msg: 'success' }
   ctx.body = JSON.stringify(json)
 })
+
+try {
+  window.oox = function () {
+    console.log(a)
+  }
+} catch (e) {
+  systemLogger.error(e)
+}
+
 module.exports = router

@@ -4,31 +4,20 @@ const bodyParser = require('koa-bodyparser')
 const path = require('path')
 const router = require('./router/index')
 
-const { logger, errLogger } = require('./log/index.js');
-const { loggers, accessLogger } = require('./logs');
+const { accessLogger, systemLogger } = require('./logs');
 
 const app = new Koa()
 
-app.use(logger)
-app.use(accessLogger());
+
+app.use(accessLogger()); //中间件
 
 
 app.on('error', err => {
-  loggers.error(111, err);
+  systemLogger.error(err)
 });
 
 
-try {
-  window.xxoo()
-} catch (error) {
-  errLogger.error(error)
-  logger.error(err);
 
-}
-
-app.on('error', err => {
-  logger.error(err);
-});
 // 配置静态资源加载中间件
 app.use(static(path.join(__dirname, '/public')))
 // 配置请求参数
@@ -37,6 +26,9 @@ app.use(
     formLimit: '1mb',
   }),
 )
+
+
+
 
 app.use(router.routes()).use(router.allowedMethods())
 
