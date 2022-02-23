@@ -1,0 +1,27 @@
+{
+  "name": "koa-tool-service",
+  "version": "1.0.0",
+  "description": "搭建基础工具服务",
+  "main": "main.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "serve": "nodemon ./main.js"
+  },
+  "keywords": [
+    "koa-tool-service"
+  ],
+  "author": "小元",
+  "license": "ISC",
+  "devDependencies": {
+    "koa": "^2.12.0",
+    "koa-bodyparser": "^4.3.0",
+    "koa-router": "^9.0.1",
+    "koa-static": "^5.0.0",
+    "markdown-it": "^12.3.2",
+    "moment": "^2.26.0"
+  },
+  "dependencies": {
+    "koa-log4": "^2.3.2",
+    "nodemon": "^2.0.15"
+  }
+}
