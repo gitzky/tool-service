@@ -20,6 +20,8 @@
     "moment": "^2.26.0"
   },
   "dependencies": {
+    "axios": "^0.26.0",
+    "koa-bodyparser": "^4.3.0",
     "koa-log4": "^2.3.2",
     "koa2-formidable": "^1.0.3",
     "nodemon": "^2.0.15"

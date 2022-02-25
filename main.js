@@ -4,6 +4,8 @@ const path = require('path')
 const router = require('./router/index')
 const formidable = require('koa2-formidable');
 
+let bodyParser = require("koa-bodyparser");
+
 
 
 const { accessLogger, systemLogger } = require('./logs');
@@ -12,7 +14,8 @@ const app = new Koa()
 
 app.use(formidable());
 
-
+// 设置bodyParser中间件
+app.use(bodyParser())
 
 
 
