@@ -1,20 +1,16 @@
-const Router = require('koa-router')
-let router = new Router()
-
-
-// 路由
-router.use('/api/readWord', async (ctx, next) => {
-  console.log('ctx.state', ctx.state)
-  var json = { code: '0', data: { a: 1 }, msg: 'success' }
-  ctx.body = JSON.stringify(json)
-})
-
-try {
-  window.oox = function () {
-    console.log(a)
-  }
-} catch (e) {
-  systemLogger.error(e)
-}
-
+const { router } = require('../utils/request')
+require('./modules/readWord')
 module.exports = router
+
+
+// const router = require('koa-router')()
+
+// router.post("/api/readWord", async (ctx, next) => {
+//   ctx.set('Content-Type', 'text/plain')
+//   ctx.set("Access-Control-Allow-Origin", '*');
+//   console.log('ctx', ctx.request.body)
+//   var json = { code: '200', data: {}, msg: 'success' }
+//   ctx.body = JSON.stringify(json)
+// })
+
+// module.exports = router

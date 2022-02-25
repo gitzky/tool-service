@@ -11,6 +11,14 @@ log4js.configure({
       encoding: "utf-8",
       filename: path.join('logs/backEnd/', 'access.log') //生成文件路径和文件名
     },
+    //请求日志
+    request: {
+      type: 'dateFile',
+      pattern: '-yyyy-MM-dd.log', //通过日期来生成文件
+      alwaysIncludePattern: true, //文件名始终以日期区分
+      encoding: "utf-8",
+      filename: path.join('logs/backEnd/', 'request.log') //生成文件路径和文件名
+    },
     //系统日志
     application: {
       type: 'dateFile',
@@ -26,9 +34,11 @@ log4js.configure({
   categories: {
     default: { appenders: ['out'], level: 'info' },
     access: { appenders: ['access'], level: 'info' },
-    application: { appenders: ['application'], level: 'WARN' }
+    application: { appenders: ['application'], level: 'WARN' },
+    request: { appenders: ['request'], level: 'info' }
   }
 });
 
 exports.accessLogger = () => log4js.koaLogger(log4js.getLogger('access')); //记录所有访问级别的日志
 exports.systemLogger = log4js.getLogger('application');  //记录所有应用级别的日志
+exports.logger = log4js.getLogger("request");//记录所有请求的日志
