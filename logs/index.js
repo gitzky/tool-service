@@ -39,6 +39,16 @@ log4js.configure({
   }
 });
 
+
+/*
+  trace()
+  debug()
+  info()
+  warn()
+  error()
+  fatal()
+
+*/
 exports.accessLogger = () => log4js.koaLogger(log4js.getLogger('access')); //记录所有访问级别的日志
 exports.systemLogger = log4js.getLogger('application');  //记录所有应用级别的日志
 exports.logger = log4js.getLogger("request");//记录所有请求的日志

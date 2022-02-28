@@ -1,2 +1,0 @@
-[2022-02-25T18:36:38.619] [INFO] access - ::ffff:127.0.0.1 - - "POST /api/readWord HTTP/1.1" 200 5 "" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/98.0.4758.102 Safari/537.36"
-[2022-02-25T18:37:11.164] [INFO] access - ::ffff:127.0.0.1 - - "POST /api/readWord HTTP/1.1" 404 - "" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/98.0.4758.102 Safari/537.36"
