@@ -12,9 +12,9 @@
 #### 请求参数：
 ```js 
 { 
-  grant_type: client_credentials,
-  client_id: 0Y2PmbBzyhfNZbM1LpDc1jBw,
-  client_secret: client_secret=OfOKVTpvfR7NwmoKkUXceuLG2vtIPp0x
+  grant_type: 'client_credentials',
+  client_id:'xxxxxx',
+  client_secret: 'xxxxxxxxxxx'
 }
 ```
 
@@ -40,7 +40,7 @@ params:{
 }
 // 请求示例：
  axios.request({
-    url: url, 
+    url: 'https://aip.baidubce.com/rest/2.0/ocr/v1/general?access_token=xxx', 
     method: 'post',
     headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
     data: { image: params.image },
