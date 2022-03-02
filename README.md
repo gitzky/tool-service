@@ -21,7 +21,7 @@
 
 
 ##
-### 读取Base64图片调取接口
+### 根据Base64图片调取接口
 #### 请求方式：POST
 #### 请求地址：https://aip.baidubce.com/rest/2.0/ocr/v1/general
 #### 请求头
